@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do Widget</title>
+<meta name="description" content="To-Do Widget is a personal Windows desktop widget that shows your to-do list on the desktop itself, gathered from text files, Excel lists, Google Tasks and starred Gmail.">
+<style>
+  :root { --bg:#f6f7f9; --fg:#1d2330; --muted:#5b6475; --card:#ffffff; --line:#e3e6ec; --accent:#2f6fed; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141a26; --fg:#e8ecf4; --muted:#a6afc2; --card:#1c2432; --line:#2a3344; --accent:#7aa5ff; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  h1 { font-size:2rem; margin:0 0 4px; }
+  h2 { font-size:1.2rem; margin:36px 0 10px; }
+  p, li { color:var(--fg); }
+  .tag { color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:14px 0; }
+  ul { padding-left:20px; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem; }
+  footer a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>To-Do Widget</h1>
+  <p class="tag">A to-do list that lives on the Windows desktop.</p>
+
+  <div class="card">
+    <p>To-Do Widget is a small Windows 11 program that draws your open tasks directly on the desktop layer,
+    underneath every other window, where a sticky note would go. It stays put when you press Win+D, it never
+    steals focus, and you can set its size and transparency to taste.</p>
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Gathers tasks from the places they already are: plain-text lists, Excel spreadsheets, Google Tasks,
+        and the Gmail messages you have starred.</li>
+    <li>Groups them by category, colors them by urgency, and shows when each was added, when it is due,
+        and how much time is left (or how overdue it is).</li>
+    <li>Supports sub-tasks, priorities and emoji, and a view of everything by day.</li>
+    <li>Ticking a task in the widget completes it where it came from: the line in the text file, the row in
+        the spreadsheet, or the task in Google Tasks. Clicking a task opens the file, list or message it came from.</li>
+    <li>Keeps a log of what you finished and when.</li>
+  </ul>
+
+  <h2>How it uses your Google account</h2>
+  <p>If you connect a Google account, the widget reads your Google Tasks lists so they appear alongside your
+  other tasks, and updates a task's completion status when you tick it in the widget. It also reads the
+  subject, sender and date of messages you have starred in Gmail so each starred message shows up as a to-do;
+  message bodies and attachments are never downloaded. Everything runs on your own computer and is stored only
+  there. Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h2>Availability</h2>
+  <p>To-Do Widget is a personal utility, built in Python and Qt, maintained for the developer's own use. It is
+  not sold or distributed commercially and has no servers, accounts or analytics of its own.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:e821p341@gmail.com">Contact</a>
+  </footer>
+</main>
+</body>
+</html>

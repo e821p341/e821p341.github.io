@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - To-Do Widget</title>
+<style>
+  :root { --bg:#f6f7f9; --fg:#1d2330; --muted:#5b6475; --card:#ffffff; --line:#e3e6ec; --accent:#2f6fed; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141a26; --fg:#e8ecf4; --muted:#a6afc2; --card:#1c2432; --line:#2a3344; --accent:#7aa5ff; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  h1 { font-size:1.8rem; margin:0 0 4px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  .tag { color:var(--muted); margin:0 0 28px; }
+  ul { padding-left:20px; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem; }
+  footer a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="tag">To-Do Widget &middot; Last updated October 28, 2026</p>
+
+  <p>To-Do Widget ("the app") is a personal Windows desktop utility that displays your to-do items on the
+  desktop. This policy explains what information the app accesses, how it is used, and where it is kept.
+  The short version: everything stays on your own computer.</p>
+
+  <h2>Information the app accesses</h2>
+  <p>The app only reads sources you point it at. Depending on what you connect, that can include:</p>
+  <ul>
+    <li><strong>Local files</strong> - plain-text to-do lists and Excel spreadsheets in the folder you choose.</li>
+    <li><strong>Google Tasks</strong> (Google Tasks API, scope <code>tasks</code>) - your task lists and the tasks in
+        them: titles, notes, due dates, parent/child relationships and completion status. The app updates a
+        task's completion status when you tick or untick it in the widget, and would create or edit a task only
+        when you explicitly do so from the widget.</li>
+    <li><strong>Gmail</strong> (Gmail API, scope <code>gmail.readonly</code>) - only messages you have
+        <em>starred</em>, and only their message ID, thread ID, subject line, sender and date, so that each starred
+        message can be shown as a to-do that links back to the conversation. Message bodies and attachments are
+        never requested or downloaded. If you turn on the optional "remove the star when I complete it" setting,
+        the app asks for the <code>gmail.modify</code> scope and uses it for one thing: removing the Starred label
+        from a message you completed in the widget. It makes no other change to your mail.</li>
+  </ul>
+
+  <h2>How the information is used</h2>
+  <p>Solely to display your tasks in the widget on your computer and to write a completion back to the source
+  you completed it from. The app does not use your information for anything else: no advertising, no profiling,
+  no analytics, and no training of any kind.</p>
+
+  <h2>Where it is stored</h2>
+  <ul>
+    <li>Task data is cached in a local database (SQLite) and a local JSON snapshot inside the app's own folder
+        on your PC, so the widget can draw instantly and keep working offline.</li>
+    <li>Google sign-in tokens are stored in a local <code>secrets</code> folder on your PC and are used only to
+        call Google's APIs on your behalf.</li>
+    <li>Nothing is uploaded to the developer or to any third party. The app has no server of its own; its only
+        network traffic is directly between your computer and Google's APIs.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>Your information is not shared with, sold to, or transferred to anyone. There are no third-party services,
+  SDKs or trackers in the app.</p>
+
+  <h2>Google API Services User Data Policy</h2>
+  <p>To-Do Widget's use and transfer to any other app of information received from Google APIs will adhere to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+  Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Retention and deletion</h2>
+  <ul>
+    <li>Cached data is refreshed every few minutes and replaced with the current contents of your sources; items
+        that disappear from a source are retained only in the app's local completed log, for the window you
+        configure (14 days by default).</li>
+    <li>To delete everything, delete the app's folder from your PC. To remove the app's Google access, delete the
+        token file in the <code>secrets</code> folder and revoke "To-Do Widget" at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The app is not directed at children and does not knowingly collect information from anyone under 13.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be posted at this address with a new "last updated" date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:e821p341@gmail.com">e821p341@gmail.com</a>.</p>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+</main>
+</body>
+</html>
